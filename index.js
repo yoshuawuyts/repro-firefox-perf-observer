@@ -1,5 +1,10 @@
 var css = require('sheetify')
 var choo = require('choo')
+var onperformance = require('on-performance')
+
+console.log('wait a bit, then call performance.mark()')
+
+onperformance((entry) => console.log('entry', entry.name))
 
 css('tachyons')
 
